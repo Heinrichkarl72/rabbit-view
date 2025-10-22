@@ -10,6 +10,6 @@
 	}
 </script>
 
-<input type="text" bind:value={name} />
+<input type="text" bind:value={name} class="text-black" />
 <div>{name}</div>
-<button class="cursor-pointer" onclick={addRabbit}>Add Rabbit!</button>
+<button class="btn btn-primary" onclick={addRabbit}>Add Rabbit!</button>

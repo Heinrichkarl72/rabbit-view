@@ -50,7 +50,7 @@
 <dialog id="editingModal" class="modal">
 	<div class="modal-box">
 		<h3 class="text-lg font-bold">Edit rabbit with ID {currentRabbitId}</h3>
-		<input type="text" placeholder="new rabbit name" bind:value={newName} />
+		<input type="text" placeholder="new rabbit name" bind:value={newName} class="text-black" />
 		<div class="modal-action">
 			<form method="dialog" class="flex gap-2">
 				<!-- if there is a button in form, it will close the modal -->
