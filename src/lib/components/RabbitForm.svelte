@@ -8,7 +8,7 @@
 	let rabbitholes = $state([]);
 
 	async function addRabbit() {
-		await store.addRabbit(name);
+		await store.addRabbit(name, rabbithole);
 		name = '';
 		store.listRabbits();
 	}
