@@ -11,11 +11,21 @@ export let store = $state({
 		store.rabbits = await pb.collection('rabbits').getFullList({
 			expand: "rabbithole"
 		});
-
 	},
 
 	editRabbit: async (id, newName) => {
-
+		let editedRabbit = {
+			name: newName
+		};
+		try {
+			const record = await pb.collection('rabbits').update(id, editedRabbit);
+			if (!response.ok) {
+				alert(await response.text());
+			}
+		} catch (error) {
+			console.log('FEHLER');
+		}
+		store.listRabbits();
 	},
 	deleteRabbit: async function (id) {
 		await pb.collection('rabbits').delete(id);
@@ -26,5 +36,3 @@ export let store = $state({
 		console.log(response);
 	}
 });
-
-

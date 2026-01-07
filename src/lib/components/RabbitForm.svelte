@@ -19,16 +19,14 @@
 </script>
 
 <div>
-	<label for="name ">Name</label>
+	<label for="name">Name</label>
 	<input id="name" type="text" bind:value={name} class="input" />
 </div>
-
 <div>
-	<label for="name ">Hasenbau</label>
+	<label for="name">Hasenbau</label>
 	<select class="select" bind:value={rabbithole}>
-		<option disabled selected>Pick a theme</option>
 		{#each rabbitholes as rabbithole (rabbithole.id)}
-			<option value={rabbithole.id}>light</option>
+			<option value={rabbithole.id}>{rabbithole.name}</option>
 		{/each}
 	</select>
 </div>
@@ -36,7 +34,6 @@
 <button class="btn btn-primary" onclick={addRabbit} disabled={wrongRabbitName || name.length === 0}
 	>Add Rabbit!</button
 >
-
 {#if wrongRabbitName}
 	<div role="alert" class="mt-4 alert alert-error">
 		<svg

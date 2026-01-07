@@ -35,9 +35,6 @@
 	{#each store.rabbits as rabbit, index (rabbit.id)}
 		<div class="pr-3 text-right">{index + 1}</div>
 		<div class="pr-3">{rabbit.name}</div>
-
-		<div class="pr-3 text-gray-500 italic">No Hasenbau</div>
-
 		{#if rabbit.expand.rabbithole}
 			<div class="pr-3">{rabbit.expand.rabbithole.name}</div>
 		{:else}
